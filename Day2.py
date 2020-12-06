@@ -22,6 +22,7 @@ def part1():
 
     file.close()
 
+
 def part2():
     file = open(path, "r")
     lines = file.readlines()
@@ -40,6 +41,7 @@ def part2():
     print(count)
 
     file.close()
+
 
 part1()
 part2()

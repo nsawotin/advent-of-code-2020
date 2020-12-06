@@ -1,6 +1,7 @@
 path = "./Inputs/day1.txt"
 # path = "./Inputs/day1Test.txt";
 
+
 def part1():
     file = open(path, "r")
     lines = file.readlines()
@@ -16,13 +17,13 @@ def part1():
                 print("Part 1:")
                 print(num1*num2)
                 found = True
-                #break
             j += 1
 
         i += 1
         j = 0
 
     file.close()
+
 
 def part2():
     file = open(path, "r")
@@ -43,7 +44,6 @@ def part2():
                     print("Part 2:")
                     print(num1*num2*num3)
                     found = True
-                    #break
                 k += 1
             j += 1
             k = 0
@@ -51,6 +51,7 @@ def part2():
         j = 0
 
     file.close()
+
 
 part1()
 part2()
