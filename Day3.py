@@ -44,28 +44,28 @@ def part2():
 
 def countTrees(initialTreeGrid, right, down):
     trees = 0
-    right1 = right
-    down1 = down
+    initialMoveRight = right
+    initialMoveDown = down
     fullTreeGrid = []
 
     # since the "same pattern repeats to the right many times", extend each row to handle this
     for row in initialTreeGrid:
         # get the approximate repeat-length of the pattern
         # add 1 to account for rounding
-        repeatToRight = int(len(initialTreeGrid) / int(len(row)/right1)) + 1
+        repeatToRight = int(len(initialTreeGrid) / int(len(row)/initialMoveRight)) + 1
 
         if(repeatToRight > 0):
             row = row * repeatToRight
         fullTreeGrid.append(row)
 
     # count the trees
-    for idx, row in enumerate(fullTreeGrid):
-        if(idx == down):
+    for index, row in enumerate(fullTreeGrid):
+        if(index == down):
             if(row[right] == '#'):
                 trees += 1
 
-            right += right1
-            down += down1
+            right += initialMoveRight
+            down += initialMoveDown
 
     return trees
 
