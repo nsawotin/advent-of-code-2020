@@ -3,6 +3,25 @@ path = "./Inputs/day5.txt"
 
 
 def part1():
+
+    seats = getSeats()
+    highestSeat = max(seats)
+
+    print("Part 1:")
+    print(highestSeat)
+
+
+def part2():
+
+    seats = getSeats()
+    # get the missing seat
+    difference = sorted(set(range(seats[0], seats[-1] + 1)).difference(seats))
+
+    print("Part 2:")
+    print(difference[0])
+
+
+def getSeats():
     seats = []
 
     with open(path) as file:
@@ -22,14 +41,7 @@ def part1():
             seat = row * 8 + col
             seats.append(seat)
 
-    print("Part 1:")
-    print(max(seats))
-
-
-def part2():
-
-    print("Part 2:")
-    print("TODO")
+    return seats
 
 
 def splitList(origList, part):
