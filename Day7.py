@@ -1,5 +1,3 @@
-# import re
-
 path = "./Inputs/day7.txt"
 # path = "./Inputs/day7Test.txt"
 # path = "./Inputs/day7Test2.txt"
